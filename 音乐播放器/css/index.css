@@ -1,0 +1,191 @@
+body,ul,li,a,p,h1,h2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* background-position: center bottom; 由于认为我的图片显示区域还可以，故不作位置变化*/
+}
+.wrapper {
+    width: 800px;
+    margin: 50px auto 0;
+}
+.main {
+    width: 100%;
+    text-align: center; /* 因为img是行级块元素 */
+    /* border: 1px solid black; */
+}
+.main img {
+    width: 200px;
+    border: 50px solid rgba(0,0,0,0.8);
+    border-radius: 50%;
+    animation: rotate 25s linear backwards infinite paused;
+    
+}
+.tool {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      background: rgba(0,0,0,0.5);
+      margin-top: 100px;
+      border-radius: 20px;
+}
+.tool .btns {
+      position: absolute;
+      left: 50px;
+      width: 120px;
+      height: 30px;
+      text-align: center;
+
+}
+
+.btns .iconfont:nth-child(2) {
+        font-size: 25px !important;        
+}
+.btns > span:hover {
+    cursor: pointer;/* 鼠标移到播放等几个btn处变成小手 */
+
+}
+span {
+    font-size: 30px;
+    color:#fff;
+}
+.tool>div {
+    top: 50%;
+    margin-top: -15px;
+}
+.controls {
+    position: absolute;
+    right: 50px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+
+}
+.progress {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: 30px;
+    /* background: red; */
+}
+.currentTime ,.allTime  {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 200;
+}
+.currentTime {
+    float: left;
+}
+.allTime {
+    float: right;
+}
+.currentTime::before, .allTime:before { /* 清理浮动 */
+    display: table;
+    content: "";
+    clear: both;
+}
+.proBox {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    display: inline-block;
+    width: 240px;
+    height: 2px;
+
+}
+.proBg {
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+.proActive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 2px;
+    background: #fff;
+}
+.radio-box {
+    position: absolute;
+    top: -9px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+.radio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -4px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+ 
+}
+/* 黑胶唱片的旋转动画 */
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.controls > span {
+    /* position: absolute; */
+    display: inline-block;
+    /* top: 5px; */
+    font-size: 20px;
+    margin: 6px auto;
+}
+/* 喇叭样式 */
+.vol-control {
+    position: absolute;
+    display: none;
+    width: 21.6px;
+    height: 120px;
+    left: 8px;
+    bottom: 30px;
+    background: rgba(0,0,0,0.5);;
+}
+/* 音量大小的样式 */
+.vol-up {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* height: 20px; */
+    color: #fff;
+    background: red;
+}
+.vol-down {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 10px; */
+    color: #fff;
+    background: green;
+}

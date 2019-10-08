@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../font_jdtczh9empp/iconfont.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main"><!-- 音乐source -->
+            <img src="../img/head.jpg" alt="">
+            <audio id="myAudio" src="../source/9277.mp3"></audio>
+        </main>
+       <div class="tool">
+            <div class="btns"> <!-- 上一首，播放/暂停，下一首按钮 -->
+                <span class="iconfont icon-shangyishou"></span>
+                <span id="change" class="iconfont icon-bofang"></span>
+                <!-- <span class="iconfont icon-zanting"></span> -->
+                <span class="iconfont icon-xiayishou"></span>            
+            </div>
+            <div class="progress"> <!-- 音乐进度条 -->
+                <div class="currentTime "></div>
+                <div class="proBox">
+                    <div class="proBg"></div>
+                    <div class="proActive">
+                        <div class="radio-box">
+                             <span class="radio"></span>
+                        </div>   
+                    </div>
+                </div>
+                <div class="allTime "></div>
+            </div>
+            <div class="controls"><!-- 音量及其目前未完成的循环按钮 -->
+                <div class="vol-control">
+                   <button class="vol-up">+</button><!-- 音量大小 -->
+                   <button class="vol-down">-</button>
+                </div>            
+                <span class="iconfont icon-yinliang"></span><!-- 音量按键 -->
+                <span class="iconfont icon-xunhuanbofang"></span>
+                <!-- 目前尚未写出来循环icon的实际作用，只是放在这里 -->
+            </div>
+       </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>
